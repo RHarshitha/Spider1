@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Spider1</string>
+    <string name="string_iron">\@String/Iron</string>
+    <string name="string_cap">\@String/Cap</string>
+    <string name="which_team_are_you_on">WHICH TEAM ARE YOU ON?</string>
+    <string name="tap_to_vote">Tap to Vote</string>
+    <string name="hold_to_punch">Hold to punch</string>
+    <string name="ironman">ironman image</string>
+    <string name="captain">captain image</string>
+</resources>
