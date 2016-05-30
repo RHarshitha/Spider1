@@ -12,6 +12,10 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     int ironclick=0;
     int capclick=0;
+    String IC="count1";
+    String CC="count2";
+    private int restore1;
+    private int restore2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,5 +73,22 @@ public class MainActivity extends AppCompatActivity {
 
         );
 
+    }
+    @Override
+    protected void onSaveInstanceState(Bundle outState){
+        outState.putInt(IC,ironclick);
+        outState.putInt(CC,capclick);
+        super.onSaveInstanceState(outState);
+    }
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState){
+        restore1=savedInstanceState.getInt(IC);
+        ironclick=restore1;
+        restore2=savedInstanceState.getInt(CC);
+        capclick=restore2;
+        TextView rtv1= (TextView)findViewById(R.id.Iron);
+        rtv1.setText("Team Ironman="+ironclick);
+        TextView rtv2=(TextView)findViewById(R.id.Cap);
+        rtv2.setText("Team Cap="+capclick);
     }
 }
